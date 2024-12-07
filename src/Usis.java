@@ -2,7 +2,6 @@ public class Usis {
     public int totalAdvisee;
     public int countCourse;
     public Student[] arr1 = new Student[5];
-    public boolean checkLogin = false;
 
     public Usis() {
         System.out.println("Usis is ready to use");
@@ -14,12 +13,12 @@ public class Usis {
         }
         else {
             System.out.println("Login successful");
-            checkLogin = true;
+            obj.checkLogin = true;
         }
     }
 
     public void advising(Student obj) {
-        if (checkLogin == true) {
+        if (obj.checkLogin == true) {
             System.out.println("You haven't selected any courses.");
         }
         else {
@@ -28,7 +27,7 @@ public class Usis {
     }
 
     public void advising(Student obj, String s1, String s2, String s3, String s4) {
-        if (checkLogin == true) {
+        if (obj.checkLogin == true) {
             System.out.println("You need special approval to take more than 3 courses.");
         }
         else {
@@ -37,7 +36,7 @@ public class Usis {
     }
 
     public void advising(Student obj, String s1, String s2, String s3) {
-        if (checkLogin == true) {
+        if (obj.checkLogin == true) {
             if (totalAdvisee < 5) {
                 arr1[totalAdvisee] = obj;
                 totalAdvisee++;

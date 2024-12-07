@@ -6,6 +6,7 @@ public class Student{
     public String password;
     public String [] courses = new String[6];
     public int countCourse;
+    public boolean checkLogin = false;
     public Student(String s1, int n, String s2){
         name = s1;
         id = n;
