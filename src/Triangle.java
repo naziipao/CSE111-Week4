@@ -22,20 +22,23 @@ public class Triangle {
         } else if (a != b && b != c && c != a) {
             return "This is a Scalene Triangle.";
         } else {
-            return "This is a Isosceles Triangle.";
+            return "This is an Isosceles Triangle.";
         }
     }
 
-    public void compareTrinagles(Triangle obj) {
-        if (this != obj) {
-            if (perimeter == obj.perimeter) {
-                System.out.println("Only the perimeter of both triangles is equal.");
-            } else if (this.a == obj.a && this.b == obj.b && this.c == obj.c) {
+    public void compareTrinagles(Triangle obj){
+        if(this != obj){
+            if(a==obj.a && b==obj.b && c==obj.c){
                 System.out.println("Addresses are different but the sides of the triangles are equal.");
-            } else {
+            }
+            else if(a!=obj.a || b!=obj.b || c!=obj.c){
                 System.out.println("Addresses, length of the sides and perimeter all are different.");
             }
-        } else {
+            else if(per == obj.per){
+                System.out.println("Only the perimeter of both triangles is equal.");
+            }
+        }
+        else{
             System.out.println("These two triangle objects have the same address.");
         }
     }
