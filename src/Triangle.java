@@ -31,10 +31,10 @@ public class Triangle {
             if(a==obj.a && b==obj.b && c==obj.c){
                 System.out.println("Addresses are different but the sides of the triangles are equal.");
             }
-            else if(a!=obj.a || b!=obj.b || c!=obj.c){
+            else if((a!=obj.a || b!=obj.b || c!=obj.c) && perimeter != obj.perimeter){
                 System.out.println("Addresses, length of the sides and perimeter all are different.");
             }
-            else if(per == obj.per){
+            else if(perimeter == obj.perimeter){
                 System.out.println("Only the perimeter of both triangles is equal.");
             }
         }
